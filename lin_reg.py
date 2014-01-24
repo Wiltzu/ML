@@ -32,7 +32,7 @@ def regularized_lin_reg(X, y):
 	
 	for i in range(20):
 		print 'iteration', i
-		weights -= learn_rate * (1.0/m) * (dot(predictions - y,X) + ((regularization_param/m) * weights)) 
+		weights -= learn_rate * ((1.0/m) * dot(predictions - y,X) + ((regularization_param/m) * weights)) 
 		print 'weights =', weights
 		predictions = predict(X, weights)
 		print 'predictions =', predictions
